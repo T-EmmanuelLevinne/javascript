@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+        <title>EXERCISE NI LEEM</title>
+    <style>
+        body {
+            font-family: "Pixelify Sans", sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>&& and else if Statement Exercise</h2>
+        <p>Enter values to test different conditions:</p>
+        
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
+        </div>
+        
+        <div>
+            <label for="score">Score (0-100):</label>
+            <input type="number" id="score" placeholder="Enter your score">
+        </div>
+        
+        <div>
+            <label for="Jacob">Si Jacob ka?</label>
+            <select id="Jacob">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        
+        <button onclick="checkConditions()">Check if Jacob peasants meet the requirements: </button>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function checkConditions() {
+            const age = parseInt(document.getElementById('age').value);
+            const score = parseInt(document.getElementById('score').value);
+            const hasMembership = document.getElementById('Jacob').value === 'true';
+            const resultDiv = document.getElementById('result');
+            
+            
+            if (age >= 18 && score >= 90 && Jacob) {
+                resultDiv.innerHTML = "Congratulations! You qualify for jacob benefits!";
+                resultDiv.style.backgroundColor = "#d4edda";
+            }
+            else if (age >= 18 && score >= 80) {
+                resultDiv.innerHTML = "Good job! You qualify for standard benefits.";
+                resultDiv.style.backgroundColor = "#cce5ff";
+            }
+            else if (age >= 18 && Jacob) {
+                resultDiv.innerHTML = "You have access to jacob benefits.";
+                resultDiv.style.backgroundColor = "#fff3cd";
+            }
+            else if (score >= 70) {
+                resultDiv.innerHTML = "You passed the minimum score requirement.";
+                resultDiv.style.backgroundColor = "#f8d7da";
+            }
+            else {
+                resultDiv.innerHTML = "Sorry, you don't meet the requirements.";
+                resultDiv.style.backgroundColor = "#f8d7da";
+            }
+        }
+    </script>
+</body>
+</html>
